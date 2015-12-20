@@ -4,7 +4,9 @@
 .article {
   margin: 30px;
   position: relative;
-  border: 1px solid #ddd;
+  // transition: transform .3 ease-in-out;
+  // border: 1px solid #ddd;
+  padding: 0 0 10px 0;
   background: #fff;
   -webkit-transition: all 0.2s ease-in;
   &.show{
@@ -18,8 +20,11 @@
   }
   img{
     max-width: 100%;
-  }
+  } 
 }
+
+
+
 @-webkit-keyframes cd-bounce-1 {
   0% {
     opacity: 0;
@@ -71,6 +76,33 @@
     transform: scale(1);
   }
 }
+
+@keyframes cd-bounce-2 {
+  0% {
+    
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    transform: scale(1.01);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .article-index{
   margin-left: 200px;
   padding: 15px 0;
@@ -116,6 +148,7 @@
 }
 .article-header{
   border-left: 5px solid;
+  border-color: color-article-border;
   padding: 15px 0px 15px 25px;
 }
 
